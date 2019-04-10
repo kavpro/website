@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "kavpro",
+  "public": true,
+  "builds": [
+    { "src": "mail.js", "use": "@now/node" },
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "routes": [{ "src": "/mail", "dest": "/mail.js" }]
+}
